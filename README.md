@@ -1,6 +1,6 @@
 # Vélo Demain 
 
-### Prévision de la demande de vélos à J+1 · Portfolio Data Science
+### Prévision de la demande de vélos à J+1 
 
 **Comment prévoir les locations du lendemain avec les informations réellement disponibles la veille ?**
 
