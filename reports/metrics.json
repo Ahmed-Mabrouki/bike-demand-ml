@@ -1,0 +1,119 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/275/bike%2Bsharing%2Bdataset.zip",
+  "sha256_day_csv": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+  "raw_rows": 731,
+  "usable_rows": 724,
+  "features": [
+    "mnth",
+    "weekday",
+    "holiday",
+    "workingday",
+    "trend",
+    "month_sin",
+    "month_cos",
+    "lag_1",
+    "lag_7",
+    "mean_7"
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "scikit_learn": "1.5.2"
+  },
+  "splits": {
+    "train": {
+      "rows": 540,
+      "start": "2011-01-08",
+      "end": "2012-06-30"
+    },
+    "validation": {
+      "rows": 92,
+      "start": "2012-07-01",
+      "end": "2012-09-30"
+    },
+    "test": {
+      "rows": 92,
+      "start": "2012-10-01",
+      "end": "2012-12-31"
+    }
+  },
+  "validation": {
+    "Semaine precedente": {
+      "mae": 801.9891304347826,
+      "rmse": 1115.1533770508101
+    },
+    "Gradient boosting": {
+      "mae": 730.1069945654838,
+      "rmse": 902.2098946453583
+    },
+    "Random forest": {
+      "mae": 785.043035585848,
+      "rmse": 925.8301818719109
+    }
+  },
+  "selected": "Gradient boosting",
+  "test": {
+    "mae": 1757.0528313796297,
+    "rmse": 2313.0151699662
+  },
+  "test_baseline": {
+    "mae": 1457.5869565217392,
+    "rmse": 2047.1676350721639
+  },
+  "mae_improvement_percent": -20.545317966655663,
+  "importance_model": "Gradient boosting",
+  "validation_importance": [
+    {
+      "feature": "lag_1",
+      "mae_increase": 71.49792642200225,
+      "std": 32.82399334690183
+    },
+    {
+      "feature": "lag_7",
+      "mae_increase": 23.10149751098147,
+      "std": 5.877466310466719
+    },
+    {
+      "feature": "weekday",
+      "mae_increase": 5.190611979629409,
+      "std": 15.795687429028673
+    },
+    {
+      "feature": "month_cos",
+      "mae_increase": 0.03901958436495079,
+      "std": 0.1430718093381839
+    },
+    {
+      "feature": "holiday",
+      "mae_increase": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "workingday",
+      "mae_increase": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "trend",
+      "mae_increase": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "month_sin",
+      "mae_increase": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "mnth",
+      "mae_increase": -0.5573495229925811,
+      "std": 0.5053848733360712
+    },
+    {
+      "feature": "mean_7",
+      "mae_increase": -2.5201974328785695,
+      "std": 15.95725247825997
+    }
+  ],
+  "protocol": "Rolling one-day-ahead evaluation; actual previous-day totals available; fixed fitted model throughout test. No observed future weather."
+}
