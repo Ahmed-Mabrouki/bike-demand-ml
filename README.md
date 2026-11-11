@@ -1,4 +1,4 @@
-# Vélo Demain 🚲
+# Vélo Demain 
 
 ### Prévision de la demande de vélos à J+1 · Portfolio Data Science
 
